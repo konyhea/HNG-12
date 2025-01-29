@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <title>HNG TASK 1</title>
+</head>
+
+<body>
+    <section class="profile-card-container">
+        <div class="profile-card-content">
+            <div class="profile-bio">
+                <div class="profile-id">
+                    <img data-testid="profilePicture" src="./Assets/profile.jpeg" alt="Profile Picture">
+                </div>
+                <div class="profile-details">
+                    <p data-testid="fullName" class="profile-name">Nduka Konyhea Prince</p>
+                    <p data-testid="jobTitle" class="profile-job-title">UI Designer</p>
+                    <div data-testid="currentLocation" class="profile-location flex">
+                        <span class="location-icon">
+                            <img src="./Assets/location_on_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="location icon">
+                        </span>
+                        <p>Lagos, Nigeria</p>
+                    </div>
+                    <div data-testid="emailAddress" class="profile-email flex">
+                        <span>
+                            <img src="./Assets/mail_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="email icon">
+                        </span>
+                        <p>ndukaprincek@gmail.com</p>
+                    </div>
+                    <div data-testid="currentTimeUTC" class="current-time flex">
+                        <img src="./Assets/schedule_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="clock time">
+                        <span id="currentTime"></span>
+                    </div>
+                    <div data-testid="socialLinks" class="profile-socials-section">
+                        <a href="#" target="_blank">
+                            <img src="./Assets/linkedin.svg" alt="LinkedIn">
+                        </a>
+                        <a href="#" target="_blank">
+                            <img src="./Assets/twitter.svg" alt="Twitter">
+                        </a>
+                        <a href="#" target="_blank">
+                            <img src="./Assets/github-142-svgrepo-com.svg" alt="GitHub">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <article class="profile-info">
+                <h5 class="about-me-container">About Me</h5>
+                <div class="about-me-text">
+                    <p class="about-me-text">
+                        I'm a frontend developer in Nigeria who loves building responsive web experiences. I aspire to work at FAANG, create impactful solutions, and push boundaries. I enjoy anime, especially Attack on Titan, and I'm a big Barcelona fan. My ultimate goal is to achieve greatness in tech and beyond.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
+    <script src="./index.js"></script>
+</body>
+
+</html>
