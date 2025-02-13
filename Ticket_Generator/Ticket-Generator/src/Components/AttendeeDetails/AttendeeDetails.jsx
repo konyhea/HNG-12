@@ -4,7 +4,7 @@ function AttendeeDetails() {
 
   return (
     <>
-    <p>YAHAH</p>
+
     </>
   )
 }
