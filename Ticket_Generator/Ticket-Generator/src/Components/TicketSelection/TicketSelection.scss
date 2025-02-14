@@ -3,52 +3,100 @@
     background: #08252B;
     border: 1px solid #0E464F;
     border-radius: 2em;
-    max-width: 700px;
 }
 
+
 .ticket-selection-container {
-    padding: 2rem;
+    padding: 1.5em;
    display: flex;
    flex-direction: column;
    justify-content: center;
 
 
-
    .header-selection-container {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: .75em;
+    position: relative;
+
 
     .ticket-selection-haeding {
         font-size: 1.5em;
         color: #FAFAFA;
+        font-family: "Alatsi", serif;
     }
 
     .ticket-selection-step-count {
         font-size: 1em;
         font-family: "Roboto", serif;
         color: #FFFFFF;
+        margin-block-end: .75em;
     }
 
+
     .ticket-selection-step-counter {
-        // width: 100%;  /* Ensure parent has width */
+        // max-width: 100%;
+        width: 100%; /* Ensures it doesn't collapse */
         height: 0.25em;
         border-radius: 4px;
         background: #0E464F;
-        position: relative; /* Needed if using absolute inside */
-        overflow: hidden;  /* Ensures the inner bar doesn't exceed */
-    
+        position: relative;
+        overflow: hidden;
+
+
         .ticket-selection-step-counter-inner {
-            width: 14.5em;
-            height: 0.25em;
+            width: 50%; /* Change based on progress */
+            height: 100%; /* Use full height */
             border-radius: 5px;
             background: #24A0B5;
-            position: absolute; /* If you want precise positioning */
+            position: absolute;
             left: 0;
         }
     }
+    
 
    }
+   
+
+   @media screen and (min-width: 800px) {
+        .header-selection-container {
+            margin-block-end: 3em;
+
+            .heading {
+                // background: red;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+              .ticket-selection-haeding {
+                font-size: 3em;
+                color: #FAFAFA;
+                font-family: "Alatsi", serif;
+
+            }
+
+            .ticket-selection-step-count {
+                align-self: end;
+                font-size: 1em;
+            }
+        }
+
+
+
+        .inner-section-container {
+            background: #08252B;
+            padding: 1.5em;
+            border: 1px solid #0E464F;
+            border-radius: 32px;
+
+            .ticket-selection-title-theme .ticket-selection-title {
+                font-size: 3.875em;
+                margin: 0.5em;
+            }
+        }
+
+}
 
     .header-selection-container {
         margin-block-end: 2em;
@@ -59,7 +107,9 @@
     }
 
 
-
+    .ticket-selection-disappear {
+        display: none;
+    }
 
     .ticket-selection-theme-box {
         // align-self: center;
@@ -67,13 +117,14 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        min-width: 275px;
-        min-height: 243px;
+        // min-width: 275px;
+        // min-height: 243px;
         padding-inline: 1em;
         padding-block: 1em;
         border-radius: 1.5em;
         border: 2px solid #07373F;
         margin-block-end: 2em; 
+        background-image: radial-gradient(circle, #07373f, #0a0c1133);
 
         .ticket-selection-title {
             font-size: 2.8em;
@@ -84,13 +135,16 @@
         }
 
         .ticket-selection-welcome-tag {
-            max-width: 15em;
-            text-align: center;
-            font-size: 0.875em;
-            font-family: "Roboto", serif;
-            color: #FAFAFA;
+            p {
+                text-align: center;
+                font-size: 0.875em;
+                font-family: "Roboto", serif;
+                color: #FAFAFA;
+            }
+            // margin-block-end: 2.5em;
         }
 
+    
         .ticket-selection-venue-time {
             display: flex;
             flex-direction: column;
@@ -115,6 +169,12 @@
 
     // Responsive Styles
     @media screen and (min-width: 800px) {
+
+     .ticket-type-container {
+
+        width: 158px;
+        height: 110px;
+     }
         .ticket-selection-theme-box {
            align-self: flex-start;
         }
@@ -129,8 +189,8 @@
         }
 
         .ticket-selection-theme-box {
-            width: 556px;
-            height: 200px;
+            // width: 556px;
+            // height: 200px;
             padding: 1.5em;
 
             .ticket-selection-title {
@@ -139,8 +199,14 @@
             }
 
             .ticket-selection-welcome-tag {
-                max-width: 21.25em;
+                // max-width: 21.25em;
                 margin-block-end: 0.5em;
+
+                p {
+                    width: 340px;
+                    text-align: center;
+                    font-size: 1em;
+                }
             }
 
             .ticket-selection-venue-time {
@@ -152,6 +218,8 @@
 
 
 
+
+
     .ticket-selection-type {
         font-size: 1em;
         font-family: "Roboto", serif;
@@ -160,26 +228,28 @@
 
 
     .ticket-selection-type-container {
-        width: 18em;
-        height: 17.2em;
+        // width: 18em;
+        // height: 17.2em;
+        background: #052228;
         border: 1px solid #07373F;
         padding: 1em;
         margin-block-end: 2em;
         border-radius: 1.5em;
         display: flex;
         flex-direction: column;
-        gap: 1em;
+        gap: 1.5em;
         color: #FAFAFA;
     }
 
     @media screen and (min-width: 800px) {
         .ticket-selection-type-container {
-            width: 34.75em;
-            height: 11.625em;
+            // width: 34.75em;
+            // height: 11.625em;
             border: 1px solid #07373F;
             padding: 1em;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            display: flex;
+            flex-direction: row;
+            gap: 1.5em;
         
         }
     }
@@ -194,15 +264,15 @@
 
     .ticket-number-dropdown {
         padding: 0.75em;
-        height: 3em;
+        // height: 3em;
         margin-block-start: .5em;
         border-radius: 0.75em;
         border: 1px solid #07373F;
-        margin-block-end: 3em; 
+        margin-block-end: 2em; 
         background: #07373F;
 
         select {
-            width: 17.4em;
+            width: 15.4em;
             border: none;
             background: #07373F;
             color: #FAFAFA;
@@ -217,62 +287,99 @@
             max-width: 34.75em;
     
             select {
-                max-width: 34.75em;
+                // max-width: 34.75em;
                 border: none;
             }   
         }
 }
 
-
     .ticket-next-cancel-button-container {
-        .next-cancel-button{
-            display: flex;
-            flex-direction: column;
-            gap: 1em;
-
-            button {
-                padding-block:.75em;
-                padding-inline: 1.5em;
-                font-size: 1em;
-                border: 1px solid #24A0B5;
-                border-radius: 0.5em;
-                cursor: pointer;
-                background: #02191D;
-                color: #24A0B5;
-            }
-
-            button:active, button:hover {
-                background: #24A0B5;
-                color: #FFFFFF;
-
-            }
-        }
-
-
-    }
-
-    @media screen and (min-width: 800px) {
-
-        .ticket-next-cancel-button-container {
-            max-width: 34.75em;
-            max-height: 3em;
-            border-radius: 1.5em;
-            background: #02191D;
-            .next-cancel-button {
-               display: flex;
-               flex-direction: row;
-               justify-content: space-around;
-            }
-        }  
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
 
         button {
-            width:13.4em
+            padding-inline: 1.5em;
+            padding-block: .75em;
+            border-radius: 8px;
+            // min-width: 287px;
+            // min-height: 48px;
         }
+
+        .ticket-next-btn {
+            border: 1px solid transparent;
+            color: #FAFAFA;
+            background: #24A0B5;
+            font-size: 1em;
+
+        }
+
+        .ticket-cancel-btn {
+            border: 1px solid #24A0B5;
+            background: transparent;
+            font-size: 1em;
+            color: #24A0B5;
+
+        }
+    }
+
+
+        @media screen and (min-width: 800px) {
+
+            .ticket-next-cancel-button-container {
+                flex-direction: row;
+                gap: 1.5em;
+            }
+
+            button {
+                width: 266px;
+            }
+    
 }
+
+
+//     .ticket-next-cancel-button-container {
+//         .next-cancel-button{
+//             display: flex;
+//             flex-direction: column;
+//             gap: 1em;
+
+//             button {
+//                 padding-block:.75em;
+//                 padding-inline: 1.5em;
+//                 font-size: 1em;
+//                 border: 1px solid #24A0B5;
+//                 border-radius: 0.5em;
+//                 cursor: pointer;
+//                 background: #02191D;
+//                 color: #24A0B5;
+//             }
+
+//             button:active, button:hover {
+//                 background: #24A0B5;
+//                 color: #FFFFFF;
+
+//             }
+//         }
+//     }
+
+
+
+
+
 
 
 .ticket-selection-type {
     color: #FAFAFA;
 }
 
+}
+
+
+@media screen and (min-width: 800px) {
+    .ticket-selection-container {
+        // background: white;
+        padding: 3em;
+        background: #041E23;
+    }
 }

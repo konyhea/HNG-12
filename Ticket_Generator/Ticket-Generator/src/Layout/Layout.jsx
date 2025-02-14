@@ -1,5 +1,7 @@
 import { Outlet } from "react-router-dom";
 import "./Layout.scss"
+import Logo from "./confirmation_number_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg"
+import Arrow from "./arrow_right_alt_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg"
 
 function Layout() {
     return (
@@ -7,7 +9,9 @@ function Layout() {
             <header className="layout-container">
                 <nav className="nav-layout-container">
                 <div className="icon-container">
-                    <div className="icon-svg"></div>
+                    <div className="icon-svg">
+                        <img src={Logo} alt="Logo icon ticz" />
+                    </div>
                     <h4 className="nav-icon-text">ticz</h4>
                 </div> 
                 <div className="selection-container">
@@ -18,12 +22,12 @@ function Layout() {
                     </div>
                 </div>
                 <div className="my-ticket-btn">
-                    <div className="ticket-btn-container">
-                        <button className="content">
-                        My Tickets
-                        <div>oshhsj</div>
+                <button className="content">
+                        <p className="btn-text">MY TICKETS</p>
+                        <div className="arrow-svg-icon">
+                            <img src={Arrow} alt="arrow-icon-svg" />
+                        </div>
                         </button>
-                    </div>
                 </div>
                 </nav>
             </header>

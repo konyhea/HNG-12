@@ -1,0 +1,131 @@
+
+
+.root-layout {
+
+// background: "radial-gradient(52.52% 32.71% at 50% 97.66%, rgba(36, 160, 181, 0.20) 0%, rgba(36, 160, 181, 0.00) 100%), #02191D", 
+
+    .layout-container {
+        padding-top: 0.625em;
+        padding-inline: 1.72em;
+        margin-block-end: 1.125em;
+
+        .nav-layout-container {
+            background: #05252C;
+            padding-inline: 1em;
+            padding-block: 0.75em;
+            // max-width: 20em;
+            // max-height: 4.25em;
+            border: 1px solid #197686;
+            border-radius: 12px;
+            display: flex;
+            gap: 3.45em;
+            justify-content: space-between;
+
+
+            .selection-container {
+                display: none;
+            }
+
+            .icon-container {
+                display: flex;
+                gap: 0.5em;
+                align-items: center;
+
+            
+
+                .icon-svg {
+                    background: #052F35;
+                    shape-outside: circle(50%);
+                    width: 40px;
+                    height: 36px;
+                    border-radius: 30%; /* Makes it a perfect circle */
+                    display: flex; /* Centers the image inside */
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden; 
+
+                    .img {
+                        width: 20px;
+                        height: 17px;
+    
+                    }
+                }
+                
+             
+
+
+                .nav-icon-text {
+                    font-size: 1.2rem;
+                }
+            }
+        
+                .content {
+                    padding: 0.75em 1em;
+                    border: 1px solid #0A0C11;
+                    display: flex;
+                    flex-direction: row;
+                    border-radius: 12px;
+                    background: #FFFFFF;
+                    // gap: .3em;
+
+
+                    .btn-text {
+                        font-size: 1em;
+                        color: #0A0C11;
+                    }
+                }
+
+       
+        }
+    }
+
+
+    @media screen and (min-width: 800px) {
+
+         .layout-container {
+        padding-top: 0.625em;
+        padding-inline: 1.72em;
+        margin-block-end: 1.125em;
+
+        .nav-layout-container {
+            background: #05252C;
+            padding-inline: 1em;
+            padding-block: 0.75em;
+            // max-width: 20em;
+            // max-height: 4.25em;
+            border: 1px solid #197686;
+            border-radius: 12px;
+            display: flex;
+            gap: 3.45em;
+            justify-content: space-between;
+
+
+            .selection-container {
+                display: block;
+
+                .btn-contents {
+                    display: flex;
+                    gap: 1em;
+
+
+                    .btn-content-item {
+                        padding: 0.625em;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+
+   
+  
+
+       
+        }
+    }
+    }
+
+    main {
+        margin: 0 auto;
+        max-width: 700px;
+    }
+
+}
