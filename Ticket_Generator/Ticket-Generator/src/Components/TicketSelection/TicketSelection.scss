@@ -1,3 +1,40 @@
+//     // STYLING THE TEXT
+//     .ticket-type-text {
+//         font-size: 1em;
+//         font-family: "Roboto", serif;
+//         font-weight: 400;
+//         color: #FAFAFA;
+//     }
+//     .ticket-amount-left {
+//         font-size: .875em;
+//         font-family: "Roboto", serif;
+//         font-weight: 400;
+//         color: #FAFAFA;
+//     }
+    
+//     .ticket-price-text{
+//         font-size: 1.25em;
+//         font-family: "Roboto", serif;
+//         font-weight: 600;
+//         text-align: right;
+//         color: #FAFAFA;
+//     }
+
+//     .ticket-price-content {
+//         margin-left: auto;
+//         // width: 5em;
+//         // height: 2.375em;
+//         // background: yellow;
+//         // margin-left: auto;
+//         padding: .5em;
+//         background: #0E464F;
+//         border: 1px solid #2BA4B9;
+//         border-radius: .5em;
+
+      
+//     }
+
+// }
 
 .section-attendee-details {
     background: #08252B;
@@ -11,6 +48,7 @@
    display: flex;
    flex-direction: column;
    justify-content: center;
+   border-radius: 2em;
 
 
    .header-selection-container {
@@ -272,7 +310,7 @@
         background: #07373F;
 
         select {
-            width: 15.4em;
+            width: 100%;
             border: none;
             background: #07373F;
             color: #FAFAFA;
@@ -304,6 +342,7 @@
             border-radius: 8px;
             // min-width: 287px;
             // min-height: 48px;
+            cursor: pointer;
         }
 
         .ticket-next-btn {
@@ -335,36 +374,10 @@
                 width: 266px;
             }
     
+            .ticket-next-btn {
+                order: 1;
+            }
 }
-
-
-//     .ticket-next-cancel-button-container {
-//         .next-cancel-button{
-//             display: flex;
-//             flex-direction: column;
-//             gap: 1em;
-
-//             button {
-//                 padding-block:.75em;
-//                 padding-inline: 1.5em;
-//                 font-size: 1em;
-//                 border: 1px solid #24A0B5;
-//                 border-radius: 0.5em;
-//                 cursor: pointer;
-//                 background: #02191D;
-//                 color: #24A0B5;
-//             }
-
-//             button:active, button:hover {
-//                 background: #24A0B5;
-//                 color: #FFFFFF;
-
-//             }
-//         }
-//     }
-
-
-
 
 
 
